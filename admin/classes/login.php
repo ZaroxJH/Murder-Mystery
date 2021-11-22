@@ -8,6 +8,7 @@ class login
     private $user_id = '';
     private $password_hash = '';
     private $database = [];
+    private $name = '';
 
     function __construct($name)
     {
@@ -23,7 +24,6 @@ class login
         $result = $result->fetch_assoc(); //this has to be located under the above "if" because ->num_rows doesn't work on arrays
 
         if ($this->status) {
-
             $this->password_hash = $result['password'];
             $this->user_id = $result['id'];
             $this->name = $name;
@@ -48,7 +48,7 @@ class login
     public function comparePassword($password): bool
     {
         if (password_verify($password, $this->password_hash)) {
-            $_SESSION['Je bent succesvol ingelogd!'];
+            $_SESSION['notification'] = 'Je bent succesvol ingelogd!';
             $_SESSION['message_type'] = true;
             return true;
         } else {
