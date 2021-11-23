@@ -2,20 +2,33 @@
 
 require_once "database.php";
 
-class data
+class data extends database
 {
+
     function __construct()
     {
-        $this->database = new database();
+        parent::__construct();
     }
 
-    public function getUsers()
+    public function showTables()
     {
-        $stmt = 'SELECT * FROM gebruikers';
-        $result = $this->database->connection->query($stmt);
-
-        foreach ($result as $gay) {
-            echo $gay['gebruikersnaam'];
-        }
+        $stmt = 'show tables from murder_mystery';
+        $result = $this->connection->query($stmt);
+        return $result->fetch_all();
     }
+
+    public function getPeople()
+    {
+        $stmt = 'SELECT * FROM person';
+        $result = $this->connection->query($stmt);
+        return $result->fetch_all();
+    }
+
+    public function getComputerUsedBy()
+    {
+        $stmt = 'SELECT * FROM computer_used_by';
+        $result = $this->connection->query($stmt);
+        return $result->fetch_all();
+    }
+
 }

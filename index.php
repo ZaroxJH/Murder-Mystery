@@ -8,8 +8,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Stefan Hoekstra">
+    <link rel="icon" type="image/x-icon" href="assets/img/icon-hacker.png">
 
-    <title>Inloggen</title>
+    <title>Welkom</title>
 
     <link href="assets/css/tailwind.css" rel="stylesheet" media="all">
     <link href="assets/fontawesome/css/fontawesome.css" rel="stylesheet">
