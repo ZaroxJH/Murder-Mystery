@@ -40,7 +40,7 @@ switch ($_POST['table_name']) {
         echo $table->createTable($headers, $data->getTeamMembers());
     break;
     case 'transport_method':
-        $headers = ['discord_id', 'car', 'bike', 'bus'];
+        $headers = ['discord_id', 'method'];
         echo $table->createTable($headers, $data->getTransportMethod());
     break;
     default:
