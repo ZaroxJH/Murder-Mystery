@@ -28,7 +28,7 @@ switch ($_POST['table_name']) {
         echo $table->createTable($headers, $data->getEvent());
     break;
     case 'person':
-        $headers = ['id', 'name', 'house_number', 'street_name', 'postal_code'];
+        $headers = ['id', 'name', 'age', 'gender', 'hair_color', 'house_number', 'street'];
         echo $table->createTable($headers, $data->getPeople());
     break;
     case 'teams':

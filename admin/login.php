@@ -2,22 +2,19 @@
 
 session_start();
 
-include 'classes/loggedIn.php';
+require_once 'handlers/LoggedIn.php';
+require_once 'classes/notification.php';
 
-$loggedIn = new loggedIn();
-$loggedIn->checkLoginOnPage();
+$message = new notification();
 
 if (isset($_SESSION['notification'])) {
-    include "classes/notification.php";
-
-    $notification = new notification();
-    echo $notification->createError($_SESSION['notification'], $_SESSION['message_type']);
-
+    echo $message->createError($_SESSION['notification'], $_SESSION['message_type']);
     unset($_SESSION['notification']);
     unset($_SESSION['message_type']);
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>

@@ -2,12 +2,7 @@
 
 session_start();
 
-include '../classes/loggedIn.php';
-$loggedIn = new loggedIn();
-
-$loggedIn->checkLoginOnPage();
-
-include '../classes/login.php';
+require_once '../classes/login.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $login = new login($_POST['name']);

@@ -55,7 +55,15 @@ $data = new data();
         <div class="container max-w-full">
             <div class="py-3">
                 <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
-                    <div id="tableContent" class="inline-block min-w-full shadow rounded-lg overflow-hidden">
+
+                    <div class="flex relative">
+                        <span class="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <input type="text" id="search" class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" name="email" placeholder="Your email"/>
+                    </div>
+
+                    <div id="tableContent" class="inline-block min-w-full shadow rounded-lg overflow-hidden display dataTable">
 
                     </div>
                 </div>

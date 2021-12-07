@@ -31,7 +31,7 @@ class grids
      */
     public function createTable(array $header_array = [], array $body_array = [], array $action_array = []): string
     {
-        return '<table class="leading-normal min-w-full table-auto overflow-auto max-h-screen">' . $this->tableHeader($header_array) . $this->tableBody($body_array, $action_array) . '</table>';
+        return '<table id="table" class="leading-normal min-w-full table-auto overflow-auto max-h-screen display dataTable">' . $this->tableHeader($header_array) . $this->tableBody($body_array, $action_array) . '</table>';
     }
 
     /*array() $header_array: Pass an array containing the columns the table should exist of

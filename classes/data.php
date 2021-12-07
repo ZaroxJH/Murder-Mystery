@@ -54,7 +54,7 @@ class data extends database
 
     public function getPeople()
     {
-        $stmt = 'SELECT * FROM person';
+        $stmt = 'SELECT * FROM person LIMIT 500';
         $result = $this->connection->query($stmt);
         return $result->fetch_all();
     }
